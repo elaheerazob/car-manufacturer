@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Engine",
+        "description": "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark plugs, cylinder heads, valves and pistons.",
+        "img": "https://i.ibb.co/tsRgSNS/artworks-000239555924-fkas35-t500x500.jpg",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    },
+    {
+        "name": "Transmission",
+        "description": "The transmission is a gearbox filled with gears and gear trains that makes effective use of the engine’s torque to change the gears and power the vehicle.",
+        "img": "https://i.ibb.co/JR4bCcq/transmissions.png",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    },
+    {
+        "name": "Battery",
+        "description": "The battery delivers the electricity needed to run your vehicle’s electrical components. Without a battery, your car won’t run.",
+        "img": "https://i.ibb.co/Pt1VNVB/car-battery-500x500.jpg",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    },
+    {
+        "name": "Alternator",
+        "description": "Part of the electrical system, the alternator charges the battery and powers the electrical system while your car is running.",
+        "img": "https://i.ibb.co/GkCkYC0/maruti-zen-lucas-internal-fan-alternator-500x500.jpg",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    },
+    {
+        "name": "Radiator",
+        "description": "The radiator is responsible for helping the engine keep cool by removing heat from coolant before it is pumped back through the engine.",
+        "img": "https://i.ibb.co/pKsDw7Y/indiga-radiator-1574164899-5161735.jpg",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    },
+    {
+        "name": "Front Axle",
+        "description": "Part of the suspension system, the front axle is where the front wheel hubs are attached.",
+        "img": "https://i.ibb.co/XZmX9dc/515-Fm-GLW7-RL.jpg",
+        "order_quantity" : "100",
+        "available_quantity" : "5000",
+        "price": "150"
+    }
+   
+]
