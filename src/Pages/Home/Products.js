@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Product from './Product';
 
 const Products = () => {
-    const [products,SetProsucts] = useState([]);
+    const [products,SetProducts] = useState([]);
     useEffect (() =>{
         const url=('http://localhost:5000/products');
         fetch(url)
         .then(res =>res.json())
-        .then(data =>SetProsucts(data))
+        .then(data =>SetProducts(data))
     } ,[])
     return (
         <div className='my-28'>

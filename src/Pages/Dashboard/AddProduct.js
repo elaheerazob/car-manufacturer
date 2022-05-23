@@ -1,4 +1,6 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddProduct = () =>  {
     const {
@@ -12,7 +14,7 @@ const AddProduct = () =>  {
     //       res.json()
     //     )
     //   );
-    const imageStorageKey = "ff4a3bca6feff6db86f309b98922d201";
+    const imageStorageKey = "0c9b210f8ded5d9130a3962b94e781c0";
   
     const onSubmit = async (data) => {
       const image = data.image[0];
@@ -32,8 +34,8 @@ const AddProduct = () =>  {
               email: data.email,
               description:data.description,
               price:data.price,
-              minimum:data.minimum,
-              available:data.available,
+              order_quantity:data.order_quantity,
+              available_quantity:data.available_quantity,
               img: img,
             };
             //send to your database:
@@ -140,7 +142,7 @@ const AddProduct = () =>  {
               type="number"
               placeholder="Your Minimum Order"
               className="input input-bordered w-full max-w-xs"
-              {...register("minimum", {
+              {...register("order_quantity", {
                 required: {
                   value: true,
                   message: "minimum is Required",
@@ -163,7 +165,7 @@ const AddProduct = () =>  {
               type="number"
               placeholder="Your Available Product"
               className="input input-bordered w-full max-w-xs"
-              {...register("available", {
+              {...register("available_quantity", {
                 required: {
                   value: true,
                   message: "available is Required",

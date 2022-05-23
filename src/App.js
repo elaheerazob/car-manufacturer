@@ -1,4 +1,6 @@
 import './App.css';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Pages/Shared/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
@@ -10,6 +12,7 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Purchase from './Pages/ProtectRoude/Purchase';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 
 function App() {
   return (
@@ -22,12 +25,14 @@ function App() {
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrder/>}></Route>
-          <Route path='addProduct' element={<AddProduct/>}></Route>
+          <Route path="addproduct" element={<AddProduct/>}></Route>
+          <Route path="manageProduct" element={<ManageProduct/>}></Route>
         </Route>
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
