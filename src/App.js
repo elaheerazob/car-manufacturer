@@ -13,6 +13,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Purchase from './Pages/ProtectRoude/Purchase';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
+import AddReview from './Pages/Dashboard/AddReview';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route index element={<MyOrder/>}></Route>
           <Route path="addproduct" element={<AddProduct/>}></Route>
           <Route path="manageProduct" element={<ManageProduct/>}></Route>
+          <Route path="addReview" element={<AddReview/>}></Route>
         </Route>
 
         <Route path="login" element={<Login />} />
