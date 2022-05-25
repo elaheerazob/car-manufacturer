@@ -13,6 +13,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li className='font-bold'><Link to="/">Home</Link></li>
+        <li className='font-bold'><Link to="/blog">Blogs</Link></li>
         <li className='font-bold'><Link to="/about">About</Link></li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
@@ -20,7 +21,7 @@ const Navbar = () => {
         <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-slate-300">
             <div className="navbar-start flex-1">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">

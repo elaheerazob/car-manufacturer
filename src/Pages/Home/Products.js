@@ -15,7 +15,7 @@ const Products = () => {
                 <h3 className='text-primary  text-3xl font-bold uppercase'>Our Product</h3>
                 
             </div>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-zinc-400 p-6'>
                 {
                     products.map(product =><Product
                         key={product._id}

@@ -38,6 +38,16 @@ const SignUp = () => {
         await updateProfile({ displayName: data.name });
         console.log('update done');
         navigate('/');
+        fetch('http://localhost:5000/user',{
+            method:"POST",
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res =>res.json())
+        .then(data =>console.log(data))
+
     }
     return (
         <div className='flex h-screen justify-center items-center'>
