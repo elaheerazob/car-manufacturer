@@ -17,6 +17,8 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Admin from './Pages/Dashboard/Admin';
 import Blog from './Pages/Blog/Blog';
 import NotFound from './Pages/NotFound/NotFound';
+import Modal from './Pages/ProtectRoude/Modal';
+import AllOrder from './Pages/Dashboard/AllOrder';
 
 function App() {
   return (
@@ -27,9 +29,11 @@ function App() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/about" element={<About />} />
         <Route path="/purchase/:id" element={<RequireAuth><Purchase/></RequireAuth>} />
+        <Route path="/modal" element={<Modal></Modal>} />
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrder/>}></Route>
+          <Route path="allOrder" element={<AllOrder/>}></Route>
           <Route path="addproduct" element={<AddProduct/>}></Route>
           <Route path="manageProduct" element={<ManageProduct/>}></Route>
           <Route path="addReview" element={<AddReview/>}></Route>
