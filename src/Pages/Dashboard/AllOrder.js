@@ -57,7 +57,7 @@ const AllOrder = () => {
               {order.map((a, index) => (
                 <tr key={a._id}>
                   <th>{index + 1}</th>
-                  <td>{a.name}</td>
+                  <td>{a.email}</td>
                   <td>{a.productName}</td>
                   <td>{a.address}</td>
                   <td>{a.phone}</td>

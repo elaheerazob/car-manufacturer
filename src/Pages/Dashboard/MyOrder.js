@@ -7,9 +7,10 @@ import auth from '../../firebase.init';
 const MyOrder = () => {
     const [order, setOrder] = useState([]);
     const [user] = useAuthState(auth);
+    console.log(user.email);
     useEffect(() => {
       if (user) {
-        fetch(`http://localhost:5000/order?email=${user.email}`, {
+        fetch(`http://localhost:5000/order/${user.email}`, {
           method: "GET",
         })
           .then((res) => {
@@ -21,6 +22,7 @@ const MyOrder = () => {
           });
       }
     }, [user]);
+    console.log(order);
   
     const handleDelete = (id) => {
       const proceed = window.confirm("Are You Sure Order Delete?");
@@ -43,7 +45,7 @@ const MyOrder = () => {
     return (
       <div className="mt-5">
         <h1 className="text-center text-secondary uppercase mt-5 mb-5 text-2xl">
-          My Order:{order.length}
+          My Order:{order?.length}
         </h1>
         <div className="overflow-x-auto">
           <table className="table w-full">
@@ -60,10 +62,10 @@ const MyOrder = () => {
               </tr>
             </thead>
             <tbody>
-              {order.map((a, index) => (
+              {order?.map((a, index) => (
                 <tr key={a._id}>
                   <th>{index + 1}</th>
-                  <td>{a.name}</td>
+                  <td>{a.email}</td>
                   <td>{a.productName}</td>
                   <td>{a.address}</td>
                   <td>{a.phone}</td>
