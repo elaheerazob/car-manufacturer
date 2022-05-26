@@ -10,7 +10,7 @@ const MyOrder = () => {
     console.log(user.email);
     useEffect(() => {
       if (user) {
-        fetch(`https://whispering-savannah-41163.herokuapp.com//order/${user.email}`, {
+        fetch(`https://whispering-savannah-41163.herokuapp.com/order/${user.email}`, {
           method: "GET",
         })
           .then((res) => {
@@ -27,7 +27,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
       const proceed = window.confirm("Are You Sure Order Delete?");
       if (proceed) {
-        const url = `https://whispering-savannah-41163.herokuapp.com//order/${id}`;
+        const url = `https://whispering-savannah-41163.herokuapp.com/order/${id}`;
         console.log(url);
         fetch(url, {
           method: "DELETE",

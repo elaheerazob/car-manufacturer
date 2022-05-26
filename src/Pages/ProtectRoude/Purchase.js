@@ -10,7 +10,7 @@ const Purchase = () => {
     const { id } = useParams();
    
     useEffect(() => {
-      fetch(`https://whispering-savannah-41163.herokuapp.com//product/${id}`)
+      fetch(`https://whispering-savannah-41163.herokuapp.com/product/${id}`)
         .then((res) => res.json())
         .then((data) => setPurchase(data));
     }, []);

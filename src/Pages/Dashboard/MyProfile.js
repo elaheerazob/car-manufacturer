@@ -7,7 +7,7 @@ const MyProfile = () => {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch(`https://whispering-savannah-41163.herokuapp.com//userprofile`, {
+    fetch(`https://whispering-savannah-41163.herokuapp.com/userprofile`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

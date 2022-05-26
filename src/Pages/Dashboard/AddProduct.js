@@ -39,7 +39,7 @@ const AddProduct = () =>  {
               img: img,
             };
             //send to your database:
-            fetch("https://whispering-savannah-41163.herokuapp.com//uploadProduct", {
+            fetch("https://whispering-savannah-41163.herokuapp.com/uploadProduct", {
               method: "POST",
               headers: {
                 "content-type": "application/json",

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 
 const AllOrder = () => {
-    const url = `https://whispering-savannah-41163.herokuapp.com//orders/`;
+    const url = `https://whispering-savannah-41163.herokuapp.com/orders/`;
     const {
       data: order,
       isLoading,
@@ -18,7 +18,7 @@ const AllOrder = () => {
     const handleDelete = (id) => {
       const proceed = window.confirm("Are You Sure Order Delete?");
       if (proceed) {
-        const url = `https://whispering-savannah-41163.herokuapp.com//order/${id}`;
+        const url = `https://whispering-savannah-41163.herokuapp.com/order/${id}`;
         // console.log(url);
         fetch(url, {
           method: "DELETE",

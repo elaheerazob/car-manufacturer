@@ -9,7 +9,7 @@ const Admin = () => {
       isLoading,
       refetch,
     } = useQuery("users", () =>
-      fetch(`https://whispering-savannah-41163.herokuapp.com//user`, {
+      fetch(`https://whispering-savannah-41163.herokuapp.com/user`, {
         method: "GET",
       }).then((res) => res.json())
     );
