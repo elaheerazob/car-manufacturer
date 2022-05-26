@@ -20,7 +20,7 @@ const Product = ({product}) => {
                 <h1 className="text-xl">Order Quantity Min :{order_quantity}</h1>
                 <h1 className="text-xl">Total quantity:{available_quantity}</h1>
                 <p>{description}</p>
-                <button onClick={() => handleProduct(_id)} class="btn  btn-wide">Buy now</button>
+                <button onClick={() => handleProduct(_id)} className="btn  btn-wide">Buy now</button>
             </div>
         </div>
     );

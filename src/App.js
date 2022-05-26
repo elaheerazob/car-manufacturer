@@ -19,6 +19,8 @@ import Blog from './Pages/Blog/Blog';
 import NotFound from './Pages/NotFound/NotFound';
 import Modal from './Pages/ProtectRoude/Modal';
 import AllOrder from './Pages/Dashboard/AllOrder';
+import Profile from './Pages/Dashboard/Profile';
+import MyProfile from './Pages/Dashboard/MyProfile';
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyOrder/>}></Route>
           <Route path="allOrder" element={<AllOrder/>}></Route>
+          <Route path="profile" element={<Profile/>}></Route>
           <Route path="addproduct" element={<AddProduct/>}></Route>
           <Route path="manageProduct" element={<ManageProduct/>}></Route>
           <Route path="addReview" element={<AddReview/>}></Route>
@@ -42,6 +45,7 @@ function App() {
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="/myprofile/:id" element={<MyProfile />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
       <ToastContainer />

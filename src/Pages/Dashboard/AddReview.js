@@ -54,9 +54,12 @@ const AddReview = () => {
         });
     };
     return (
-      <div className="mt-10">
-        <h1 className="text-2xl text-center text-secondary font-bold ">Review Add</h1>
-        <form className="mb-10" onSubmit={handleSubmit(onSubmit)}>
+      <div className="mt-10   ">
+        <div>
+        <h1 className="text-2xl  text-secondary font-bold ">Review Add</h1>
+        </div>
+        <div>
+        <form className="mb-10 " onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Name</span>
@@ -132,6 +135,7 @@ const AddReview = () => {
             value="Add"
           />
         </form>
+        </div>
       </div>
     );
   };

@@ -36,20 +36,20 @@ const ManageProduct = () => {
              
             <div>
                  
-              <div class="card w-96 bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
-                  <img src={p.img} alt="Shoes" class="rounded-xl" />
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                  <img src={p.img} alt="Shoes" className="rounded-xl" />
                 </figure>
-                <div class="card-body items-center text-center">
-                  <h2 class="card-title text-secondary">Name:{p.name}</h2>
+                <div className="card-body items-center text-center">
+                  <h2 className="card-title text-secondary">Name:{p.name}</h2>
                   <p>Price:${p.price}</p>
                   <p>Minimum Order:{p.order_quantity}</p>
                   <p>Available:{p.available_quantity}</p>
                   <p>Description:{p.description}</p>
-                  <div class="card-actions">
+                  <div className="card-actions">
                     <button
                       onClick={() => handleDelete(p._id)}
-                      class="btn btn-secondary"
+                      className="btn btn-secondary"
                     >
                       Delete Now
                     </button>

@@ -1,183 +1,62 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
-const MyProfile = () =>  {
-    const { id } = useParams();
-    const {
-      register,
-      formState: { errors },
-      handleSubmit,
-      reset,
-    } = useForm();
-    const imageStorageKey = "0c9b210f8ded5d9130a3962b94e781c0";
-  
-    const onSubmit = async (data) => {
-      const image = data.image[0];
-      const formData = new FormData();
-      formData.append("image", image);
-      const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
-      fetch(url, {
-        method: "POST",
-        body: formData,
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          if (result.success) {
-            const img = result.data.url;
-            const product = {
-              name: data.name,
-              facebook:data.facebook,
-              age:data.age,
-              linkedin:data.linkedin,
-              img: img,
-            };
-            //send to your database:
-            fetch(`http://localhost:5000/userprofile/${id}`, {
-              method: "PUT",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(product),
-            })
-              .then((res) => res.json())
-              .then((inserted) => {
-                 
-                  toast(" added successfully");
-                  reset();
-                
-              });
-          }
-        });
-    };
-  
-    return (
-      <div className="mt-10">
-        <h1 className="text-2xl text-center text-secondary font-bold ">Profile Add</h1>
-        <form className="mb-10" onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Profile Name</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="input input-bordered w-full max-w-xs"
-              {...register("name", {
-                required: {
-                  value: true,
-                  message: "Name is Required",
-                },
-              })}
-            />
-            <label className="label">
-              {errors.name?.type === "required" && (
-                <span className="label-text-alt text-red-600">
-                  {errors.name.message}
-                </span>
-              )}
-            </label>
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Facebook Url</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Your Facebook"
-              className="input input-bordered w-full max-w-xs"
-              {...register("facebook", {
-                required: {
-                  value: true,
-                  message: "Name is Required",
-                },
-              })}
-            />
-            <label className="label">
-              {errors.facebook?.type === "required" && (
-                <span className="label-text-alt text-red-600">
-                  {errors.facebook.message}
-                </span>
-              )}
-            </label>
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Linkedin Url</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Your linkedin"
-              className="input input-bordered w-full max-w-xs"
-              {...register("linkedin", {
-                required: {
-                  value: true,
-                  message: "Name is Required",
-                },
-              })}
-            />
-            <label className="label">
-              {errors.linkedin?.type === "required" && (
-                <span className="label-text-alt text-red-600">
-                  {errors.linkedin.message}
-                </span>
-              )}
-            </label>
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Age</span>
-            </label>
-            <input
-              type="number"
-              placeholder="Your Age"
-              className="input input-bordered w-full max-w-xs"
-              {...register("age", {
-                required: {
-                  value: true,
-                  message: "age is Required",
-                },
-              })}
-            />
-            <label className="label">
-              {errors.age?.type === "required" && (
-                <span className="label-text-alt text-red-600">
-                  {errors.age.message}
-                </span>
-              )}
-            </label>
-          </div>
-  
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Image</span>
-            </label>
-            <input
-              type="file"
-              className="input input-bordered w-full max-w-xs"
-              {...register("image", {
-                required: {
-                  value: true,
-                  message: "Image is Required",
-                },
-              })}
-            />
-            <label className="label">
-              {errors.name?.type === "required" && (
-                <span className="label-text-alt text-red-600">
-                  {errors.name.message}
-                </span>
-              )}
-            </label>
-          </div>
-  
-          <input
-            className="btn w-full max-w-xs text-white btn-accent"
-            type="submit"
-            value="Add"
-          />
-        </form>
-      </div>
-        );
+const MyProfile = () => {
+  const { id } = useParams();
+
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    fetch(`http://localhost:5000/userprofile`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
+  return (
+    <div>
+      <form className="w-1/4 mx-auto" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          placeholder="user name"
+          className="input input-bordered mb-2 w-full"
+          {...register("name")}
+        />
+        <br />
+        <input
+          placeholder="address"
+          className="input input-bordered mb-2 w-full"
+          {...register("address")}
+        />
+        <br />
+        <input
+          placeholder="facebook link"
+          className="input input-bordered mb-2 w-full"
+          type="text"
+          {...register("facebook")}
+        />
+        <br />
+        <input
+          placeholder="linkdin link"
+          className="input input-bordered mb-2 w-full"
+          type="text"
+          {...register("linkdin")}
+        />
+        <br />
+        <input
+          placeholder="age"
+          className="input input-bordered mb-2 w-full"
+          type="number"
+          {...register("age")}
+        />
+        <br />
+        <input className="btn btn-md px-10 mt-3" type="submit" />
+      </form>
+    </div>
+  );
+};
+
 export default MyProfile;

@@ -17,16 +17,16 @@ const Purchase = () => {
     const { name, img, description, available_quantity
       , order_quantity,price } = purchase;
     return (
-      <div class="card w-96 bg-base-100 shadow-xl mx-auto mt-16">
-        <figure class="px-10 pt-10">
-          <img src={img} alt="Shoes" class="rounded-xl" />
+      <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-16">
+        <figure className="px-10 pt-10">
+          <img src={img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Name:{name}</h2>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Name:{name}</h2>
           <p>Description:{description}</p>
           <p>Price:{price}</p>
-          <div class="card-actions">
-            <label for="my-modal-3"  class="btn modal-button btn-accent">
+          <div className="card-actions">
+            <label for="my-modal-3"  className="btn modal-button btn-accent">
               Order Now
             </label>
           </div>

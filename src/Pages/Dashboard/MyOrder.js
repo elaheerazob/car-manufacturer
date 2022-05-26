@@ -58,7 +58,7 @@ const MyOrder = () => {
                 <th>Phone</th>
                 <th>Price</th>
                 <th>Delete</th>
-                <th>Payment</th>
+                {/* <th>Payment</th> */}
               </tr>
             </thead>
             <tbody>
@@ -76,7 +76,7 @@ const MyOrder = () => {
                   >
                     Delete Order
                   </button>
-                  <td>
+                  {/* <td>
                     {a.price && !a.paid && (
                       <Link to={`/dashboard/payment/${a._id}`}>
                         <button className="btn btn-xs btn-accent">Payment</button>
@@ -90,7 +90,7 @@ const MyOrder = () => {
                         </p>
                       </div>
                     )}
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>
