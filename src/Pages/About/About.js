@@ -15,13 +15,7 @@ const About = () => {
               Fornt End Web Developer
             </h1>
             <p className="py-6">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              voluptas dolores dolore natus accusantium consectetur velit eos,
-              illum harum ex explicabo! Quidem possimus doloribus suscipit sequi
-              alias? Non earum accusantium nihil a dolor commodi nesciunt sunt
-              velit itaque. Deleniti ullam est libero nulla aliquam iusto corporis
-              sed, consequatur aut optio ab itaque mollitia sint recusandae
-              quidem! Aliquid distinctio ut tenetur.
+            Hi! I am  Ridwan, a web designer and developer focused on crafting great web experiences. Designing and Coding have been my passion since the days I started working with computers but I found myself into web design/development since 2020. I enjoy creating beautifully designed, intuitive and functional websites.For over past 2 years, I have worked for some of the best digital agencies and wonderful clients to create some award winning works. And, I can make this happen for your business as well
               <span className="text-white">www.ridwanelahee282@gmail.com</span>
             </p>
           </div>
@@ -153,7 +147,7 @@ const About = () => {
             </div>
             <div>
                 <a className="btn btn-xs btn-secondary" target='blank' href="https://www.facebook.com/">Facebook</a>
-                <a className="btn btn-xs btn-secondary mx-10" target='blank'  href="https://github.com/pallobbiwas">Email</a>
+                <a className="btn btn-xs btn-secondary mx-10" target='blank'  href="https://github.com">Email</a>
                 <a className="btn btn-xs btn-secondary" target='blank'  href="pallobbiswas326@gmail.com">Github</a>
             </div>
           </div>

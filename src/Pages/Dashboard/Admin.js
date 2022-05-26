@@ -30,9 +30,10 @@ const Admin = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user) => (
+              {users.map((user ,index) => (
                 <UserAdmin
                   key={user._id}
+                  index={index}
                   user={user}
                   refetch={refetch}
                 ></UserAdmin>
