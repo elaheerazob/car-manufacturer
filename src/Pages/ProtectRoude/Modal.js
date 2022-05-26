@@ -15,7 +15,7 @@ const Modal = ({name,price,available_quantity}) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/uploadOrder", {
+    fetch("https://whispering-savannah-41163.herokuapp.com//uploadOrder", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

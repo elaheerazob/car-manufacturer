@@ -10,7 +10,7 @@ const Profile = () => {
   const [users, setUsers] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user.email}`)
+    fetch(`https://whispering-savannah-41163.herokuapp.com//user/${user.email}`)
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [user?.email]);

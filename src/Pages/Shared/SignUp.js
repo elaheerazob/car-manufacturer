@@ -52,7 +52,7 @@ const SignUp = () => {
     console.log("update done");
 
     navigate("/");
-    fetch("http://localhost:5000/user", {
+    fetch("https://whispering-savannah-41163.herokuapp.com//user", {
       method: "POST",
       headers: {
         "content-type": "application/json",

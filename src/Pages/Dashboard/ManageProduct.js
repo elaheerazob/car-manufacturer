@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const ManageProduct = () => {
     const [products,SetProducts] = useState([]);
     useEffect (() =>{
-        const url=('http://localhost:5000/products');
+        const url=('https://whispering-savannah-41163.herokuapp.com//products');
         fetch(url)
         .then(res =>res.json())
         .then(data =>SetProducts(data))
@@ -12,7 +12,7 @@ const ManageProduct = () => {
     const handleDelete = (id) => {
       const proceed = window.confirm("Are You Sure Delete?");
       if (proceed) {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://whispering-savannah-41163.herokuapp.com//product/${id}`;
         fetch(url, {
           method: "DELETE",
         })
